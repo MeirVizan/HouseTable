@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Alert, Button, Card, CardActions, CardContent, TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const api_url = 'http://localhost:4000'
 
@@ -41,7 +42,7 @@ function UpdateHouseForm() {
                 loanAmount,
             });
             console.log('House updated:', response.data);
-            setAlertMassage({ flag: true, info: 'success', massage: 'The House record was created successfully!' })
+            setAlertMassage({ flag: true, info: 'success', massage: 'The House record was updated successfully!' })
         } catch (error) {
             console.error('Error updating house:', error);
         }
@@ -49,6 +50,10 @@ function UpdateHouseForm() {
 
     return (
         <div>
+            <div style={{ textAlign: 'center' }}>
+
+                <h1>House Evaluation System</h1>
+            </div>
             <form style={{ display: 'grid', width: '20%', margin: '122px auto' }} onSubmit={handleSubmit}>
                 {alertMassage.flag &&
                     <Alert severity="success" color={alertMassage.info}>
@@ -80,6 +85,9 @@ function UpdateHouseForm() {
                     </CardActions>
 
                 </Card>
+
+                <Link to={`/`}  > For a new record </Link>
+
             </form>
         </div>
     );

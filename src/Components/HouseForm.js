@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -58,7 +58,10 @@ function HouseForm() {
     }
     return (
         <div>
+            <div style={{ textAlign: 'center' }}>
 
+                <h1>House Evaluation System</h1>
+            </div>
             <form style={{ display: 'grid', width: '20%', margin: '122px auto' }} onSubmit={handleSubmit}>
                 {alertMassage.flag && <Alert severity="success" color={alertMassage.info}>
                     {alertMassage.massage}

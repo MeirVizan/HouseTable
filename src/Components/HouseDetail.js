@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const api_url = 'http://localhost:4000'
 
@@ -34,6 +34,10 @@ function HouseDetail() {
             textAlign: 'center',
             margin: '100px auto'
         }}>
+            <div style={{ textAlign: 'center' }}>
+
+                <h1>House Evaluation System</h1>
+            </div>
             <h2>House Details</h2>
             <p>Address: {house.address}</p>
             <p>Current Value: {house.currentValue}</p>
