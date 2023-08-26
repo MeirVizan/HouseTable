@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+.form {
+  display: 'grid';
+  width: '20%',;
+  margin: '122px auto';
+}
+
+.text-field {
+  display: 'grid';
+  max-width: '100%';
+  width: '90%';
+  margin-bottom: '30px';
+}
+
+.link-house {
+  display: 'flex'; 
+  margin: 'auto';
+}
